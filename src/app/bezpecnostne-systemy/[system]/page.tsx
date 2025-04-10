@@ -1,7 +1,11 @@
-import { notFound } from "next/navigation"
+"use client"
+
+import { useParams } from "next/navigation"
+import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 const SYSTEMS = [
   {
@@ -9,7 +13,7 @@ const SYSTEMS = [
     title: "Elektrická požiarna signalizácia",
     image: "/poziarny.png",
     content: [
-      "Elektrická požiarna signalizácia (EPS) slúži na preventívnu ochranu objektov pred požiarom tak, že opticky a akusticky signalizuje vznik a miesto požiaru...",
+      "Elektrická požiarna signalizácia (EPS) slúži na preventívnu ochranu objektov pred požiarom tak, že opticky a akusticky signalizuje vznik a miesto požiaru.",
       "EPS má charakter pomocného zariadenia, ktoré je jedným z prostriedkov protipožiarneho istenia objektu.",
     ],
   },
@@ -18,9 +22,8 @@ const SYSTEMS = [
     title: "Kamerové systémy",
     image: "/camera.png",
     content: [
-      "Umožňujú snímať, prenášať, zobrazovať a zaznamenávať obraz (príp. aj zvuk) zo sledovaného priestoru...",
-      "Všetky uvedené kritéria by potom mali jednoznačne určiť, či je vhodná analógová alebo IP technológia...",
-      "Ku kamerovým systémom patria tiež video doplnky, prepínače a inštalačný materiál.",
+      "Umožňujú snímať, prenášať, zobrazovať a zaznamenávať obraz (príp. aj zvuk) zo sledovaného priestoru.",
+      "Ku kamerovým systémom patria aj doplnky, ako prevodníky, kvadrátory a kabeláž.",
     ],
   },
   {
@@ -28,39 +31,44 @@ const SYSTEMS = [
     title: "Prístupové systémy",
     image: "/pristup.png",
     content: [
-      "Prístupové systémy slúžia na riadenie prístupu osôb do objektov podľa prístupových práv...",
-      "Média môžu byť čipové kľúčenky, karty, biometrické dáta a pod.",
-      "Záznam prístupov, prepojenie s ústredňou, časové zóny a ďalšie pokročilé funkcie.",
+      "Prístupové systémy slúžia na riadenie prístupu osôb do objektov podľa prístupových práv.",
+      "Identifikácia môže prebiehať pomocou PIN kódu, čipovej karty alebo biometrie.",
     ],
   },
 ]
 
-export default function SystemPage({ params }: { params: { system: string } }) {
-  const system = SYSTEMS.find((s) => s.id === params.system)
+export default function SystemPage() {
+  const { system } = useParams()
+  const router = useRouter()
 
-  if (!system) return notFound()
+  const data = SYSTEMS.find((s) => s.id === system)
+
+  useEffect(() => {
+    if (!data) {
+      router.replace("/not-found") // Optional custom 404 route
+    }
+  }, [data, router])
+
+  if (!data) return null
 
   return (
     <section className="min-h-screen bg-[#141414] text-white">
-      {/* Top image */}
       <div className="relative h-[50vh] w-full">
         <Image
-          src={system.image}
-          alt={system.title}
+          src={data.image}
+          alt={data.title}
           fill
           className="object-cover object-center brightness-75"
-          priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-white">
-            {system.title}
+          <h1 className="text-4xl md:text-5xl font-bold text-center">
+            {data.title}
           </h1>
         </div>
       </div>
 
-      {/* Main content */}
       <div className="max-w-4xl mx-auto px-4 py-12 space-y-6">
-        {system.content.map((text, i) => (
+        {data.content.map((text, i) => (
           <p key={i} className="text-gray-300">{text}</p>
         ))}
 
