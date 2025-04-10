@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,17 +15,26 @@ export default function Footer() {
               Profesionálne bezpečnostné systémy pre váš domov a podnikanie
             </p>
             <div className="flex items-center space-x-2 group">
-              <a href="tel:+421911437275" className="hover:text-blue-300 transition-colors">
+              <a
+                href="tel:+421911437275"
+                className="hover:text-blue-300 transition-colors"
+              >
                 +421 911 437 275
               </a>
             </div>
             <div className="flex items-center space-x-2 group">
-              <a href="tel:+421905437275" className="hover:text-blue-300 transition-colors">
+              <a
+                href="tel:+421905437275"
+                className="hover:text-blue-300 transition-colors"
+              >
                 +421 905 437 275
               </a>
             </div>
             <div className="flex items-center space-x-2 group">
-              <a href="mailto:mmk@mmk.sk" className="hover:text-blue-300 transition-colors">
+              <a
+                href="mailto:mmk@mmk.sk"
+                className="hover:text-blue-300 transition-colors"
+              >
                 mmk@mmk.sk
               </a>
             </div>
@@ -36,21 +45,36 @@ export default function Footer() {
             <h3 className="text-xl font-bold">Navigácia</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#bezpecnostne-systemy" className="group flex items-center transition-colors">
+                <Link
+                  href="/#bezpecnostne-systemy"
+                  className="group flex items-center transition-colors"
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="hover:text-blue-300 transition-colors">Systémy</span>
+                  <span className="hover:text-blue-300 transition-colors">
+                    Systémy
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="/#uctovnictvo" className="group flex items-center transition-colors">
+                <Link
+                  href="/#uctovnictvo"
+                  className="group flex items-center transition-colors"
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="hover:text-blue-300 transition-colors">Účtovníctvo</span>
+                  <span className="hover:text-blue-300 transition-colors">
+                    Účtovníctvo
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="/#kontakt" className="group flex items-center transition-colors">
+                <Link
+                  href="/#kontakt"
+                  className="group flex items-center transition-colors"
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <span className="hover:text-blue-300 transition-colors">Kontakt</span>
+                  <span className="hover:text-blue-300 transition-colors">
+                    Kontakt
+                  </span>
                 </Link>
               </li>
             </ul>
@@ -91,9 +115,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} | M.M.K.SK | M.M.K s.r.o. Všetky práva vyhradené.</p>
+          <p>
+            © {new Date().getFullYear()} | M.M.K.SK | M.M.K s.r.o. Všetky práva
+            vyhradené.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

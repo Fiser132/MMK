@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -18,15 +18,16 @@ export default function HeroSection() {
               Bezpečnostné systémy
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
-              Vaša   
+              Vaša
               <span className="relative px-4 inline-block text-white">
                 bezpečnosť
-              </span>{' '}
+              </span>{" "}
               – naša priorita!
             </h1>
             <p className="text-gray-400 md:text-xl lg:text-lg xl:text-xl max-w-xl mx-auto lg:mx-0">
-              Spoločnosť M.M.K s.r.o Vám ponúka kompletnú bezpečnosť a ochranu Vášho majetku! Získajte ešte dnes
-              profesionálne zabezpečovacie systémy PARADOX pre pohodlie Vášho bezpečia!
+              Spoločnosť M.M.K s.r.o Vám ponúka kompletnú bezpečnosť a ochranu
+              Vášho majetku! Získajte ešte dnes profesionálne zabezpečovacie
+              systémy PARADOX pre pohodlie Vášho bezpečia!
             </p>
           </div>
 
@@ -46,5 +47,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

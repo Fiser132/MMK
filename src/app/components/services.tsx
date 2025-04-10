@@ -1,13 +1,16 @@
-'use client'
+"use client";
 
-import * as React from 'react'
-import * as Accordion from '@radix-ui/react-accordion'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as React from "react";
+import * as Accordion from "@radix-ui/react-accordion";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Services() {
   return (
-    <section id="systemy" className="py-16 md:py-24 bg-[#141414] relative overflow-hidden px-4 md:px-6">
+    <section
+      id="systemy"
+      className="py-16 md:py-24 bg-[#141414] relative overflow-hidden px-4 md:px-6"
+    >
       {/* Background visuals */}
       <div className="absolute -top-40 right-0 w-80 h-80 bg-blue-900 rounded-full opacity-30 blur-3xl" />
       <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-blue-900/30 rounded-full blur-2xl" />
@@ -30,7 +33,16 @@ export default function Services() {
             </div>
             <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-6 shadow-sm hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/40 transition-all">
               <p className="text-gray-300 leading-relaxed">
-                Elektronické zabezpečovacie systémy slúžia na ochranu objektov pred nevítanými návštevníkmi. V prípade narušenia spúšťajú zvukové a vizuálne alarmy alebo odosielajú upozornenia správcovi či bezpečnostnej službe. Riadiacim centrom je zabezpečovacia ústredňa, ktorá vyhodnocuje dáta zo senzorov a reaguje podľa preddefinovaných scenárov. Detektory monitorujú pohyb, otvorenie dverí a okien, otrasy, či rozbitie skla. Systém je zálohovaný batériou, má možnosti diaľkového ovládania a zaznamenáva všetky udalosti. Systémy sa jednoducho inštalujú a rozširujú o ďalšie komponenty.
+                Elektronické zabezpečovacie systémy slúžia na ochranu objektov
+                pred nevítanými návštevníkmi. V prípade narušenia spúšťajú
+                zvukové a vizuálne alarmy alebo odosielajú upozornenia správcovi
+                či bezpečnostnej službe. Riadiacim centrom je zabezpečovacia
+                ústredňa, ktorá vyhodnocuje dáta zo senzorov a reaguje podľa
+                preddefinovaných scenárov. Detektory monitorujú pohyb, otvorenie
+                dverí a okien, otrasy, či rozbitie skla. Systém je zálohovaný
+                batériou, má možnosti diaľkového ovládania a zaznamenáva všetky
+                udalosti. Systémy sa jednoducho inštalujú a rozširujú o ďalšie
+                komponenty.
               </p>
             </div>
           </div>
@@ -58,62 +70,62 @@ export default function Services() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 type AccordionItem = {
-  value: string
-  title: string
-  description: string
-}
+  value: string;
+  title: string;
+  description: string;
+};
 
 const accordionItems: AccordionItem[] = [
   {
-    value: 'galaxy',
-    title: 'GALAXY',
+    value: "galaxy",
+    title: "GALAXY",
     description:
-      'Obsahuje rad ústrední EZS na vysokej technologickej úrovni. Všetky komunikujú slovne cez displej vo viacerých jazykoch. Podporujú programovanie slučiek a výstupov, vzdialené moduly, segmentáciu systému, čítacie hlavy, kalendár, letný čas a diaľkovú správu.',
+      "Obsahuje rad ústrední EZS na vysokej technologickej úrovni. Všetky komunikujú slovne cez displej vo viacerých jazykoch. Podporujú programovanie slučiek a výstupov, vzdialené moduly, segmentáciu systému, čítacie hlavy, kalendár, letný čas a diaľkovú správu.",
   },
   {
-    value: 'aritech',
-    title: 'ARITECH',
+    value: "aritech",
+    title: "ARITECH",
     description:
-      'Profesionálne zabezpečovacie systémy vhodné pre malé aj veľké objekty. Umožňujú integráciu s rôznymi detektormi a ponúkajú flexibilitu inštalácie.',
+      "Profesionálne zabezpečovacie systémy vhodné pre malé aj veľké objekty. Umožňujú integráciu s rôznymi detektormi a ponúkajú flexibilitu inštalácie.",
   },
   {
-    value: 'paradox-digiplex',
-    title: 'DIGIPLEX',
+    value: "paradox-digiplex",
+    title: "DIGIPLEX",
     description:
-      'Systém pre vysokú úroveň zabezpečenia. Určený pre náročné aplikácie s množstvom pripojených zón, používateľov a funkcií.',
+      "Systém pre vysokú úroveň zabezpečenia. Určený pre náročné aplikácie s množstvom pripojených zón, používateľov a funkcií.",
   },
   {
-    value: 'paradox-esprit',
-    title: 'ESPRIT',
+    value: "paradox-esprit",
+    title: "ESPRIT",
     description:
-      'Cenovo dostupný systém s podporou 4 až 24 slučiek. Jednoduchá konfigurácia a inštalácia.',
+      "Cenovo dostupný systém s podporou 4 až 24 slučiek. Jednoduchá konfigurácia a inštalácia.",
   },
   {
-    value: 'paradox-spectra',
-    title: 'SPECTRA',
+    value: "paradox-spectra",
+    title: "SPECTRA",
     description:
-      'Pokračovanie rady Esprit so zvýšenou kapacitou a rozšírenými funkciami. Ideálne riešenie pre domácnosti a malé firmy.',
+      "Pokračovanie rady Esprit so zvýšenou kapacitou a rozšírenými funkciami. Ideálne riešenie pre domácnosti a malé firmy.",
   },
   {
-    value: 'paradox-magellan',
-    title: 'MAGELLAN',
+    value: "paradox-magellan",
+    title: "MAGELLAN",
     description:
-      'Bezdrôtový systém s elegantným vzhľadom, navrhnutý pre moderné domácnosti. Spája dizajn, pohodlie a bezpečnosť.',
+      "Bezdrôtový systém s elegantným vzhľadom, navrhnutý pre moderné domácnosti. Spája dizajn, pohodlie a bezpečnosť.",
   },
   {
-    value: 'dsc',
-    title: 'DSC',
+    value: "dsc",
+    title: "DSC",
     description:
-      'Kanadská značka známa kvalitnými, modulárnymi systémami. Podporuje rôzne jazyky, integráciu s kamerami a smart systémami.',
+      "Kanadská značka známa kvalitnými, modulárnymi systémami. Podporuje rôzne jazyky, integráciu s kamerami a smart systémami.",
   },
   {
-    value: 'others',
-    title: 'Ďalšie systémy',
+    value: "others",
+    title: "Ďalšie systémy",
     description:
-      'Tiež montujeme systémy značiek ROKONET, JABLOTRON, SATEL a iné podľa potreby klienta.',
+      "Tiež montujeme systémy značiek ROKONET, JABLOTRON, SATEL a iné podľa potreby klienta.",
   },
-]
+];

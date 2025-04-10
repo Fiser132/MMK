@@ -1,10 +1,8 @@
-
-import HeroSection from "./components/hero-section"
-import Features from "./components/features"
-import Services from "./components/services"
-import ContactSection from "./components/contact-section"
-import BezpecnostneSystemy from "./components/systemy"
-
+import HeroSection from "./components/hero-section";
+import Features from "./components/features";
+import Services from "./components/services";
+import ContactSection from "./components/contact-section";
+import BezpecnostneSystemy from "./components/systemy";
 
 export default function Home() {
   return (
@@ -13,9 +11,9 @@ export default function Home() {
         <HeroSection />
         <Features />
         <Services />
-        <BezpecnostneSystemy/>
+        <BezpecnostneSystemy />
         <ContactSection />
       </main>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClock,
   faBullseye,
@@ -8,7 +8,7 @@ import {
   faMobileScreen,
   faVideo,
   faCheckCircle,
-} from '@fortawesome/free-solid-svg-icons'
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Features() {
   return (
@@ -40,46 +40,51 @@ export default function Features() {
             className="group flex flex-col items-center space-y-4 rounded-xl border border-gray-700 bg-gray-800/50 p-6 shadow-sm transition-all duration-300 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/40 hover:-translate-y-1"
           >
             <div className="rounded-full bg-blue-900 p-3 transition-colors duration-300 group-hover:bg-blue-800">
-              <FontAwesomeIcon icon={feature.icon} className="h-6 w-6 text-blue-300" />
+              <FontAwesomeIcon
+                icon={feature.icon}
+                className="h-6 w-6 text-blue-300"
+              />
             </div>
-            <h3 className="text-xl font-bold text-white text-center">{feature.title}</h3>
+            <h3 className="text-xl font-bold text-white text-center">
+              {feature.title}
+            </h3>
             <p className="text-center text-gray-400">{feature.description}</p>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
 
 const features = [
   {
     icon: faClock,
-    title: 'Rýchla montáž',
-    description: 'Profesionálna a rýchla inštalácia bezpečnostných systémov',
+    title: "Rýchla montáž",
+    description: "Profesionálna a rýchla inštalácia bezpečnostných systémov",
   },
   {
     icon: faBullseye,
-    title: 'Strategické umiestnenie čidiel',
-    description: 'Optimálne umiestnenie senzorov pre maximálnu účinnosť',
+    title: "Strategické umiestnenie čidiel",
+    description: "Optimálne umiestnenie senzorov pre maximálnu účinnosť",
   },
   {
     icon: faTags,
-    title: 'Bezkonkurenčné ceny',
-    description: 'Kvalitné služby za prijateľné ceny',
+    title: "Bezkonkurenčné ceny",
+    description: "Kvalitné služby za prijateľné ceny",
   },
   {
     icon: faMobileScreen,
-    title: 'Okamžité upozornenie na telefón',
-    description: 'Rýchle notifikácie v prípade narušenia bezpečnosti',
+    title: "Okamžité upozornenie na telefón",
+    description: "Rýchle notifikácie v prípade narušenia bezpečnosti",
   },
   {
     icon: faVideo,
-    title: 'Videozáznam z objektu',
-    description: 'Monitorovanie a záznam z vášho objektu',
+    title: "Videozáznam z objektu",
+    description: "Monitorovanie a záznam z vášho objektu",
   },
   {
     icon: faCheckCircle,
-    title: 'Profesionálny tím',
-    description: 'Skúsení odborníci s dlhoročnými skúsenosťami',
+    title: "Profesionálny tím",
+    description: "Skúsení odborníci s dlhoročnými skúsenosťami",
   },
-]
+];

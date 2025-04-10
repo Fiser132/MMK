@@ -1,35 +1,38 @@
-"use client"
+"use client";
 
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useEffect, useRef } from "react"
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useRef } from "react";
 
 export default function ContactSection() {
-  const mapRef = useRef<HTMLDivElement>(null)
+  const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new ResizeObserver(() => {
       if (mapRef.current) {
-        const iframe = mapRef.current.querySelector("iframe")
+        const iframe = mapRef.current.querySelector("iframe");
         if (iframe) {
-          iframe.style.height = `${mapRef.current.offsetHeight}px`
+          iframe.style.height = `${mapRef.current.offsetHeight}px`;
         }
       }
-    })
+    });
 
     if (mapRef.current) {
-      observer.observe(mapRef.current)
+      observer.observe(mapRef.current);
     }
 
     return () => {
       if (mapRef.current) {
-        observer.unobserve(mapRef.current)
+        observer.unobserve(mapRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   return (
-    <section id="kontakt" className="py-16 md:py-24 bg-[#141414] relative overflow-hidden px-4 md:px-6">
+    <section
+      id="kontakt"
+      className="py-16 md:py-24 bg-[#141414] relative overflow-hidden px-4 md:px-6"
+    >
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-blue-900 rounded-full opacity-30 blur-3xl" />
       <div className="absolute -top-40 -left-0 w-80 h-80 bg-indigo-900 rounded-full opacity-30 blur-3xl" />
       <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-blue-800 rounded-full opacity-20" />
@@ -62,12 +65,17 @@ export default function ContactSection() {
               <div>IČDPH: SK2023104600</div>
 
               <div className="pt-4 border-t border-gray-700">
-                <div className="text-white font-semibold mb-3">Kralovič Milan</div>
+                <div className="text-white font-semibold mb-3">
+                  Kralovič Milan
+                </div>
                 <div className="flex items-center gap-3 mb-2">
                   <div className="h-8 w-8 flex items-center justify-center bg-blue-900 text-blue-300 rounded-md">
                     <FontAwesomeIcon icon={faPhone} className="h-4 w-4" />
                   </div>
-                  <a href="tel:0905437275" className="hover:text-blue-300 transition-colors">
+                  <a
+                    href="tel:0905437275"
+                    className="hover:text-blue-300 transition-colors"
+                  >
                     0905 437 275
                   </a>
                 </div>
@@ -76,10 +84,16 @@ export default function ContactSection() {
                     <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" />
                   </div>
                   <div className="space-y-1">
-                    <a href="mailto:mmk@mmk.sk" className="block hover:text-blue-300 transition-colors">
+                    <a
+                      href="mailto:mmk@mmk.sk"
+                      className="block hover:text-blue-300 transition-colors"
+                    >
                       mmk@mmk.sk
                     </a>
-                    <a href="mailto:kralovic@mmk.sk" className="block hover:text-blue-300 transition-colors">
+                    <a
+                      href="mailto:kralovic@mmk.sk"
+                      className="block hover:text-blue-300 transition-colors"
+                    >
                       kralovic@mmk.sk
                     </a>
                   </div>
@@ -106,7 +120,10 @@ export default function ContactSection() {
                 <div className="h-8 w-8 flex items-center justify-center bg-blue-900 text-blue-300 rounded-md">
                   <FontAwesomeIcon icon={faPhone} className="h-4 w-4" />
                 </div>
-                <a href="tel:0905840680" className="hover:text-blue-300 transition-colors">
+                <a
+                  href="tel:0905840680"
+                  className="hover:text-blue-300 transition-colors"
+                >
                   0905 840 680
                 </a>
               </div>
@@ -116,10 +133,16 @@ export default function ContactSection() {
                   <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" />
                 </div>
                 <div className="space-y-1">
-                  <a href="mailto:mmk@mmk.sk" className="block hover:text-blue-300 transition-colors">
+                  <a
+                    href="mailto:mmk@mmk.sk"
+                    className="block hover:text-blue-300 transition-colors"
+                  >
                     mmk@mmk.sk
                   </a>
-                  <a href="mailto:mosovska@mmk.sk" className="block hover:text-blue-300 transition-colors">
+                  <a
+                    href="mailto:mosovska@mmk.sk"
+                    className="block hover:text-blue-300 transition-colors"
+                  >
                     mosovska@mmk.sk
                   </a>
                 </div>
@@ -147,5 +170,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
