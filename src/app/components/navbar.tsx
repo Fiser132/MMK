@@ -26,7 +26,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="relative h-20 w-32">
+        <Link href="/" className="relative h-30 w-44">
           <Image
             src="/mmkLogo.png"
             alt="M.M.K Logo"
