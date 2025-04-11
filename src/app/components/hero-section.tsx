@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#141414] py-16 md:py-24 lg:py-32 px-4 md:px-6">
+    <section className="relative overflow-hidden bg-[#141414] py-16 md:py-24 lg:py-32 px-4 md:px-0">
       {/* Background circles */}
       <div className="absolute -top-40 -right-40 w-[30rem] h-[30rem] bg-blue-900 rounded-full opacity-20 blur-[120px]" />
       <div className="absolute -bottom-40 -left-40 w-[30rem] h-[30rem] bg-indigo-900 rounded-full opacity-20 blur-[120px]" />
@@ -25,7 +25,7 @@ export default function HeroSection() {
               – naša priorita!
             </h1>
             <p className="text-gray-400 md:text-xl lg:text-lg xl:text-xl max-w-xl mx-auto lg:mx-0">
-              Spoločnosť M.M.K s.r.o Vám ponúka kompletnú bezpečnosť a ochranu
+              Spoločnosť M.M.K IT, s.r.o Vám ponúka kompletnú bezpečnosť a ochranu
               Vášho majetku! Získajte ešte dnes profesionálne zabezpečovacie
               systémy PARADOX pre pohodlie Vášho bezpečia!
             </p>

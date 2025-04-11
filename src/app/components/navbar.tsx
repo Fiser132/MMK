@@ -24,9 +24,9 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-0 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="relative h-30 w-44">
+        <Link href="/" className="relative h-30 w-28">
           <Image
             src="/mmkLogo.png"
             alt="M.M.K Logo"
@@ -63,7 +63,6 @@ export default function Navbar() {
           <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="lg" />
         </button>
       </div>
-
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-[#141414]/95 backdrop-blur-md border-t border-gray-700">
@@ -77,7 +76,7 @@ export default function Navbar() {
                 key={label}
                 href={href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-300 text-sm py-2 border-b border-gray-700 hover:text-blue-300 transition-colors"
+                className="text-gray-300 text-sm py-3 w-full border-b border-gray-700 hover:text-blue-300 transition-colors"
               >
                 {label}
               </Link>

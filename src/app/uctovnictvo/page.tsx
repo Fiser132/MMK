@@ -15,7 +15,7 @@ export default function UctovnictvoPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0c0c14] to-[#141428] text-gray-200">
       {/* Hero Section */}
-      <div className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
+      <div className="relative h-[60vh] md:h-[60vh] w-full overflow-hidden">
         <Image
           src="/uctovnictvo.png"
           alt="Účtovníctvo a finančné služby"
@@ -25,7 +25,7 @@ export default function UctovnictvoPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c0c14] opacity-90" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-6 z-10">
-          <div className="inline-block rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm px-5 py-2 text-sm font-medium text-blue-300 mb-4">
+          <div className="inline-block rounded-full bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm mt-20 md:mt-0 px-5 py-2 text-sm font-medium text-blue-300 mb-4">
             Profesionálne účtovné služby
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-blue-200 via-indigo-200 to-blue-300 bg-clip-text text-transparent max-w-4xl">
@@ -38,7 +38,7 @@ export default function UctovnictvoPage() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-16 space-y-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-0 py-16 space-y-24">
         {/* Benefits */}
         <section>
           <div className="text-center mb-12">

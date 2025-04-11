@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              M.M.K s.r.o
+              M.M.K IT, s.r.o
             </h3>
             <p className="text-gray-400">
               Profesionálne bezpečnostné systémy pre váš domov a podnikanie
@@ -19,15 +19,15 @@ export default function Footer() {
                 href="tel:+421911437275"
                 className="hover:text-blue-300 transition-colors"
               >
-                +421 911 437 275
+                +421 905 437 275
               </a>
             </div>
             <div className="flex items-center space-x-2 group">
               <a
-                href="tel:+421905437275"
+                href="tel:+421905 840 680"
                 className="hover:text-blue-300 transition-colors"
               >
-                +421 905 437 275
+                +421 905 840 680
               </a>
             </div>
             <div className="flex items-center space-x-2 group">
@@ -84,7 +84,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Adresa</h3>
             <p className="text-gray-400">
-              M.M.K., s.r.o.
+              M.M.K. IT, s.r.o.
               <br />
               Kriková 10
               <br />
@@ -116,7 +116,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
           <p>
-            © {new Date().getFullYear()} | M.M.K.SK | M.M.K s.r.o. Všetky práva
+            © {new Date().getFullYear()} | M.M.K.SK | M.M.K IT, s.r.o. Všetky práva
             vyhradené.
           </p>
         </div>

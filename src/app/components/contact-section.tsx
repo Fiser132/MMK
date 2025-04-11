@@ -59,7 +59,7 @@ export default function ContactSection() {
             </div>
 
             <div className="space-y-4 text-[15px] text-gray-300 leading-relaxed">
-              <div className="text-white font-semibold">M.M.K., s.r.o.</div>
+              <div className="text-white font-semibold">M.M.K. IT, s.r.o.</div>
               <div>Kriková 10, 821 07 Bratislava</div>
               <div>IČO: 44 158 785</div>
               <div>IČDPH: SK2023104600</div>
